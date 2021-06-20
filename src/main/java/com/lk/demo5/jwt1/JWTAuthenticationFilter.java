@@ -112,7 +112,7 @@ public class JWTAuthenticationFilter extends BasicAuthenticationFilter {
         if (username != null && !username.equals("")) {
 //            踩坑提醒 此处password不能为null
             MobileUser principal = new MobileUser(username, "", authorities);
-            return new MobileAuthenticationToken(authorities, principal.getUsername(), "123456");
+            return new MobileAuthenticationToken(authorities, principal.getUsername(), "");
         }
         return null;
     }
